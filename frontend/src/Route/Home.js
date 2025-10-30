@@ -148,7 +148,7 @@ const Home = () => {
 
           {p.image && (
             <img
-              src={`http://localhost:5000${p.image}`}
+              src={`https://social-app-x8zt.onrender.com${p.image}`}
               alt="post"
               style={{
                 width: '100%',
