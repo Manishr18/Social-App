@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import Api from '../Api';
+import nProgress from 'nprogress';
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    nProgress.start()
     try {
       const res = await Api.post('/auth/login', form);
       console.log(res.data);
@@ -15,6 +18,7 @@ const Login = () => {
     } catch (err) {
       alert(err.response.data.error);
     }
+    nProgress.done()
   };
 
   return (
