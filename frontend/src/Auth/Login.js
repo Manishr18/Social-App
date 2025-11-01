@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Api from '../Api';
 import nProgress from 'nprogress';
+import 'nprogress/nprogress.css';
+
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
